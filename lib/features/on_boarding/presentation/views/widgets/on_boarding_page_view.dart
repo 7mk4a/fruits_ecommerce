@@ -1,4 +1,3 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_ecommerce/core/utils/app_images.dart';
 import 'package:fruits_ecommerce/features/on_boarding/presentation/views/widgets/on_page_view_item.dart';
