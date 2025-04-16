@@ -40,11 +40,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         DotsIndicator(
           dotsCount: 2,
           decorator: DotsDecorator(
-            activeColor: AppColors.primary,
+            activeColor: AppColors.primaryColor,
             color:
                 currentPage == 0
-                    ? AppColors.primary.withOpacity(0.5)
-                    : AppColors.primary,
+                    ? AppColors.primaryColor.withOpacity(0.5)
+                    : AppColors.primaryColor,
           ),
         ),
         SizedBox(height: 30),
