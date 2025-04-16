@@ -18,7 +18,7 @@ class OnBoardingPageView extends StatelessWidget {
           image: Assets.imagesPageViewItem1Image,
           backGroungImage: Assets.imagesPageViewItem1BackgroundImage,
           subTitle:
-              'اكتشف تجربة تسوق فريدة مع FruitHUB.واحصل على أفضل العروض والجودة العالية. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة',
+              'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
 

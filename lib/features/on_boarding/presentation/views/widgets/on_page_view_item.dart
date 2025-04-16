@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_ecommerce/core/utils/app_text_styles.dart';
 
 class OnPageViewItem extends StatelessWidget {
   const OnPageViewItem({
@@ -34,7 +35,15 @@ class OnPageViewItem extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(16),
-                child: Visibility(visible: isVisable, child: Text("تخطي")),
+                child: Visibility(
+                  visible: isVisable,
+                  child: Text(
+                    "تخطي",
+                    style: TextStyles.regular13.copyWith(
+                      color: Color(0xFF949D9E),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
@@ -42,8 +51,12 @@ class OnPageViewItem extends StatelessWidget {
         title,
         SizedBox(height: 24),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(subTitle),
+          padding: const EdgeInsets.symmetric(horizontal: 37),
+          child: Text(
+            textAlign: TextAlign.center,
+            subTitle,
+            style: TextStyles.semiBold13.copyWith(color: Color(0xFF4E5456)),
+          ),
         ),
       ],
     );
