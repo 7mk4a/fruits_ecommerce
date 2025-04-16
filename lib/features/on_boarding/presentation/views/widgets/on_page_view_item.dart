@@ -8,9 +8,11 @@ class OnPageViewItem extends StatelessWidget {
     required this.backGroungImage,
     required this.subTitle,
     required this.title,
+    required this.isVisable,
   });
   final String image, backGroungImage, subTitle;
   final Widget title;
+  final bool isVisable;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,10 @@ class OnPageViewItem extends StatelessWidget {
                 right: 0,
                 bottom: 0,
               ),
-              Padding(padding: const EdgeInsets.all(16), child: Text("تخطي")),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Visibility(visible: isVisable, child: Text("تخطي")),
+              ),
             ],
           ),
         ),

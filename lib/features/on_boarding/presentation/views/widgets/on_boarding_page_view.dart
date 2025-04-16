@@ -3,13 +3,16 @@ import 'package:fruits_ecommerce/core/utils/app_images.dart';
 import 'package:fruits_ecommerce/features/on_boarding/presentation/views/widgets/on_page_view_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
-  const OnBoardingPageView({super.key});
+  const OnBoardingPageView({super.key, required this.pageController});
 
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: [
         OnPageViewItem(
+          isVisable: true,
           image: Assets.imagesPageViewItem1Image,
           backGroungImage: Assets.imagesPageViewItem1BackgroundImage,
           subTitle:
@@ -42,6 +45,7 @@ class OnBoardingPageView extends StatelessWidget {
           ),
         ),
         OnPageViewItem(
+          isVisable: false,
           image: Assets.imagesPageViewItem2Image,
           backGroungImage: Assets.imagesPageViewItem2BackgroundImage,
           subTitle:
