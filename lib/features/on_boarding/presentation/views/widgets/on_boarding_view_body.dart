@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_ecommerce/core/utils/app_colors.dart';
 import 'package:fruits_ecommerce/core/widgets/custom_button.dart';
+import 'package:fruits_ecommerce/features/auth/presentation/views/login_view.dart';
 import 'package:fruits_ecommerce/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -55,7 +56,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             maintainSize: true,
             maintainState: true,
             visible: currentPage == 1 ? true : false,
-            child: CustomButton(text: 'ابدأ الان', onPressed: () {}),
+            child: CustomButton(
+              text: 'ابدأ الان',
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+              },
+            ),
           ),
         ),
         SizedBox(height: 43),

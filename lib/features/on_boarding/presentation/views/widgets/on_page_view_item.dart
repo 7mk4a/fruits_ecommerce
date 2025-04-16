@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_ecommerce/core/utils/app_text_styles.dart';
+import 'package:fruits_ecommerce/features/auth/presentation/views/login_view.dart';
 
 class OnPageViewItem extends StatelessWidget {
   const OnPageViewItem({
@@ -33,14 +34,21 @@ class OnPageViewItem extends StatelessWidget {
                 right: 0,
                 bottom: 0,
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Visibility(
-                  visible: isVisable,
-                  child: Text(
-                    "تخطي",
-                    style: TextStyles.regular13.copyWith(
-                      color: Color(0xFF949D9E),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(
+                    context,
+                  ).pushReplacementNamed(LoginView.routeName);
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Visibility(
+                    visible: isVisable,
+                    child: Text(
+                      "تخطي",
+                      style: TextStyles.regular13.copyWith(
+                        color: Color(0xFF949D9E),
+                      ),
                     ),
                   ),
                 ),
