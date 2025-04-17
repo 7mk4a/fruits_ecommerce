@@ -4,7 +4,7 @@ import 'package:fruits_ecommerce/constants.dart';
 import 'package:fruits_ecommerce/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_ecommerce/core/utils/app_colors.dart';
 import 'package:fruits_ecommerce/core/widgets/custom_button.dart';
-import 'package:fruits_ecommerce/features/auth/presentation/views/login_view.dart';
+import 'package:fruits_ecommerce/features/auth/presentation/views/widgets/login_view.dart';
 import 'package:fruits_ecommerce/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 
 class OnBoardingViewBody extends StatefulWidget {

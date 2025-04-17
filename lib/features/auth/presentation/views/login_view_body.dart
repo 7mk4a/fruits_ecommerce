@@ -49,7 +49,7 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(height: 33),
               CustomButton(onPressed: () {}, text: 'تسجيل الدخول'),
               SizedBox(height: 33),
-              DontHaveAccountWidget(),
+              DontHaveAccount(),
               SizedBox(height: 33),
               OrDivider(),
               SizedBox(height: 16),
