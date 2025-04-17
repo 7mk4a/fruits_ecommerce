@@ -39,6 +39,5 @@ class DontHaveAccount extends StatelessWidget {
       ),
       textAlign: TextAlign.center,
     );
-    ;
   }
 }
