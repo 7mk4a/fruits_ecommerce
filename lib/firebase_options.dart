@@ -68,7 +68,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCW8nFkJdoRZBmqWqiEUq2KsgRQqwdPnTs',
+    apiKey: 'Your API KEY',
     appId: '1:985477721279:ios:6642924cd1c2038c4e2a0a',
     messagingSenderId: '985477721279',
     projectId: 'friuts-app',
@@ -77,7 +77,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAMMVCc0nMHvzn8S7SARngZImCYLRtJ2oY',
+    apiKey: 'Your API KEY',
     appId: '1:985477721279:web:6486c00da3290c2a4e2a0a',
     messagingSenderId: '985477721279',
     projectId: 'friuts-app',
