@@ -10,7 +10,15 @@ import 'package:fruits_ecommerce/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // Check if Firebase is already initialized
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp(
+      name: 'name-here',
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
+
   await Prefs.init();
   runApp(const FriutsApp());
 }
