@@ -41,7 +41,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAMMVCc0nMHvzn8S7SARngZImCYLRtJ2oY',
+    apiKey: 'Your API KEY',
     appId: '1:985477721279:web:abd7bfb351361a234e2a0a',
     messagingSenderId: '985477721279',
     projectId: 'friuts-app',
@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBhgeJQpuvmlV5-Hg2fWeQ6daGw1cgjR6U',
+    apiKey: 'Your API KEY',
     appId: '1:985477721279:android:bf857a1273141aa94e2a0a',
     messagingSenderId: '985477721279',
     projectId: 'friuts-app',
@@ -59,7 +59,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCW8nFkJdoRZBmqWqiEUq2KsgRQqwdPnTs',
+    apiKey: 'Your API KEY',
     appId: '1:985477721279:ios:6642924cd1c2038c4e2a0a',
     messagingSenderId: '985477721279',
     projectId: 'friuts-app',
