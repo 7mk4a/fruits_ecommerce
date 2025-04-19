@@ -6,7 +6,6 @@ import 'package:fruits_ecommerce/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_ecommerce/features/auth/presentation/signup_cubits/signup_cubit/signup_cubit.dart';
 import 'package:fruits_ecommerce/features/auth/presentation/views/widgets/have_account.dart';
 import 'package:fruits_ecommerce/features/auth/presentation/views/widgets/terms_and_conditions.dart';
-import 'package:fruits_ecommerce/generated/l10n.dart';
 
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
