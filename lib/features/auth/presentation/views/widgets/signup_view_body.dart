@@ -9,36 +9,30 @@ class SignupViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: BuildAppBar(context, title: 'حساب جديد'),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kHorizintalPadding),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(height: 24),
-              CustomTextFormField(
-                hintText: "اسم المستخدم",
-                textInputType: TextInputType.name,
-              ),
-              SizedBox(height: 16),
-              CustomTextFormField(
-                hintText: "البريد الألكتروني",
-                textInputType: TextInputType.emailAddress,
-              ),
-              SizedBox(height: 16),
-              CustomTextFormField(
-                hintText: "كلمة المرور",
-                textInputType: TextInputType.emailAddress,
-                suffixIcon: Icon(
-                  Icons.remove_red_eye,
-                  color: Color(0XFFC9CECF),
-                ),
-              ),
-              SizedBox(height: 16),
-              TermsAndConditions(),
-            ],
-          ),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: kHorizintalPadding),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 24),
+            CustomTextFormField(
+              hintText: "اسم المستخدم",
+              textInputType: TextInputType.name,
+            ),
+            SizedBox(height: 16),
+            CustomTextFormField(
+              hintText: "البريد الألكتروني",
+              textInputType: TextInputType.emailAddress,
+            ),
+            SizedBox(height: 16),
+            CustomTextFormField(
+              hintText: "كلمة المرور",
+              textInputType: TextInputType.emailAddress,
+              suffixIcon: Icon(Icons.remove_red_eye, color: Color(0XFFC9CECF)),
+            ),
+            SizedBox(height: 16),
+            TermsAndConditions(),
+          ],
         ),
       ),
     );
