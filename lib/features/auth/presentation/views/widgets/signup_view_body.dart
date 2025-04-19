@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_ecommerce/constants.dart';
-import 'package:fruits_ecommerce/core/widgets/custom_app_bar.dart';
 import 'package:fruits_ecommerce/core/widgets/custom_button.dart';
 import 'package:fruits_ecommerce/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_ecommerce/features/auth/presentation/views/widgets/have_account.dart';
