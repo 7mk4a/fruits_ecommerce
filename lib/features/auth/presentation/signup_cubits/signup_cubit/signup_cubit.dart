@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:fruits_ecommerce/features/auth/domain/entites/user_entity.dart';
 import 'package:fruits_ecommerce/features/auth/domain/repos/auth_repo.dart';
@@ -14,6 +15,9 @@ class SignupCubit extends Cubit<SignupState> {
     String password,
     String name,
   ) async {
+    log(
+      "SignupCubit.createUserWithEmailAndPassword started for email: $email and name: $name",
+    );
     emit(SignupLoading());
     final result = await authRepo.createdUserWithEmailAndPassword(
       email,
@@ -21,8 +25,18 @@ class SignupCubit extends Cubit<SignupState> {
       name,
     );
     result.fold(
-      (failure) => emit(SignupFailure(messege: failure.message)),
-      (UserEntity) => emit(SignupSuccess(userEntity: UserEntity)),
+      (failure) {
+        log(
+          "SignupCubit.createUserWithEmailAndPassword failed: ${failure.message}",
+        );
+        emit(SignupFailure(messege: failure.message));
+      },
+      (UserEntity) {
+        log(
+          "SignupCubit.createUserWithEmailAndPassword succeeded for user: ${UserEntity.name}",
+        );
+        emit(SignupSuccess(userEntity: UserEntity));
+      },
     );
   }
 }

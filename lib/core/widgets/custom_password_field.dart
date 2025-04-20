@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_ecommerce/core/widgets/custom_text_form_field.dart';
 
+// ignore: must_be_immutable
 class PasswordField extends StatefulWidget {
   PasswordField({super.key, this.onSaved});
   void Function(String?)? onSaved;
@@ -15,7 +16,7 @@ class _PasswordFieldState extends State<PasswordField> {
   Widget build(BuildContext context) {
     return CustomTextFormField(
       obscureText: obscureText,
-      onSaved: (value) {},
+      onSaved: widget.onSaved,
       hintText: "كلمة المرور",
       textInputType: TextInputType.emailAddress,
       suffixIcon: GestureDetector(

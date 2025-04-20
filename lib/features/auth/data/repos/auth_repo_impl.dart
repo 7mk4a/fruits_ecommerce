@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:fruits_ecommerce/core/errors/exceptions.dart';
 import 'package:fruits_ecommerce/core/errors/failure.dart';
@@ -16,14 +17,26 @@ class AuthRepoImpl extends AuthRepo {
     String name,
   ) async {
     try {
+      log(
+        "AuthRepoImpl.createdUserWithEmailAndPassword started for email: $email and name: $name",
+      );
       var user = await firebaseAuthServices.createUserWithEmailAndPassword(
         email,
         password,
       );
+      log(
+        "AuthRepoImpl.createdUserWithEmailAndPassword succeeded for user: ${user.email}",
+      );
       return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
+      log(
+        "AuthRepoImpl.createdUserWithEmailAndPassword failed with CustomException: ${e.message}",
+      );
       return left(ServerFailure(e.message));
     } catch (e) {
+      log(
+        "AuthRepoImpl.createdUserWithEmailAndPassword failed with unexpected error: ${e.toString()}",
+      );
       return left(ServerFailure('An error occurred Please Try Again'));
     }
   }

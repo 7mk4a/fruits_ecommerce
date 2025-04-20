@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruits_ecommerce/core/errors/exceptions.dart';
 
@@ -11,6 +13,9 @@ class FirebaseAuthServices {
           .createUserWithEmailAndPassword(email: email, password: password);
       return credential.user!;
     } on FirebaseAuthException catch (e) {
+      log(
+        "Exception in firebase auth services.createUserWithEmailAndPassword ${e.toString()}",
+      );
       if (e.code == 'weak-password') {
         throw CustomException(message: 'هذا الرقم السري ضعيف.');
       } else if (e.code == 'email-already-in-use') {
