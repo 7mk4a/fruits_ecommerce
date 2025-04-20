@@ -22,7 +22,6 @@ class _SignupViewBodyState extends State<SignupViewBody> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   late String email, userName, password;
   late bool isTermsAccepted = false;
-
   @override
   Widget build(BuildContext context) {
     return Padding(
